@@ -6,7 +6,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public event Action<bool> OnGameFinished;
+
     public event Action OnSuccessfulHit;
+
     public int level;
     public LevelSO levelSO;
     public int maxLevelNumber;
@@ -45,10 +47,7 @@ public class GameManager : MonoBehaviour
             if (level != maxLevelNumber)
             {
                 PlayerPrefs.SetInt("level", level + 1);
-            }                
+            }
         }
-            
-           
-        
     }
 }

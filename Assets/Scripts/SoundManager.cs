@@ -37,6 +37,7 @@ public class SoundManager : MonoBehaviour
                 audioSource.PlayOneShot(loseClip);
                 break;
             case clipTypes.hit:
+                audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.PlayOneShot(hitClip);
                 break;
         }
