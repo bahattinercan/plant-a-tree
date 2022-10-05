@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
         OnGameFinished?.Invoke(isPlayerWin);
+        AdController.Instance.GameFinished();
         // Oyun kazanýlmýþsa yeni level açýlýr
         if (isPlayerWin && PlayerPrefs.GetInt("level") == level)
         {
